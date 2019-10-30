@@ -1,0 +1,31 @@
+#server port configuration
+server:
+  port: 7777
+  
+ #cfg View resolver  
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+      
+ #cfg database 
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: system
+    password: manager
+    
+ #to view sql query
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+# Message configuration
+userapp:
+   messages:
+    successmsg: User Registration Successfull
+    failuremsg: User Registration failed
+      
+ 
